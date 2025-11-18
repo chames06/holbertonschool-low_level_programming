@@ -1,10 +1,10 @@
-#ifndef MAIN_H            /* <--- guard */
-# define MAIN_H
+/* 0-reset_to_98.c */
+#include "main.h"
+#include <stddef.h>   /* <-- Ajout */
 
-/* prototypes --------------------------------------------------------------*/
-void reset_to_98(int *n);
-
-/* prototype de _putchar (déjà fourni par l’environnement) */
-int _putchar(char c);
-
-#endif /* MAIN_H */   /* <--- fin du guard */
+void reset_to_98(int *n)
+{
+    if (n == NULL)      /* protection contre un pointeur nul */
+        return;
+    *n = 98;            /* mise à jour de la valeur pointée */
+}
