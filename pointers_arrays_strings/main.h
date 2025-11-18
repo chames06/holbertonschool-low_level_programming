@@ -1,10 +1,7 @@
-/* 0-reset_to_98.c */
-#include "main.h"
-#include <stddef.h>   /* <-- Ajout */
+#ifndef MAIN_H
+#define MAIN_H
 
-void reset_to_98(int *n)
-{
-    if (n == NULL)      /* protection contre un pointeur nul */
-        return;
-    *n = 98;            /* mise à jour de la valeur pointée */
-}
+void reset_to_98(int *n);
+int _putchar(char c);
+
+#endif
